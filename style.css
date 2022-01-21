@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
+/**/
 *{
     padding: 0;
     margin: 0;
@@ -8,15 +9,21 @@
 }
 
 body {
-    background-color: rgb(197, 209, 180);
+    background-color: rgb(180, 207, 209);
 }
 
 header{
-    position: sticky;
     top: 0px;
     background-color: #FFF;
     width: 100%;
     z-index: 1000;
+    
+}
+
+.header-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
 }
 
 .top-container {
@@ -24,36 +31,99 @@ header{
     align-items: center;
     justify-content: space-between;
     border-bottom: 3px #f8f9fa solid;
-    font-size: .95rem;
-    color: #565B6C;
 }
 
 .top-logo {
     padding-left: 2em;
+    padding-top: 1.3rem;
+    padding-bottom: 1rem;
     display: flex;
 }
 
 .top-logo img {
     width: 300px;
+}
+
+.nav-wdgts {
+   
 
 }
 
-.top-btns {
-    display: flex;
+.nav-wdgts-container { 
+    position: absolute;
+        display: flex;
     align-items: center;
+    top: 0;
+    right: 0;
+    font-size: 14px;
+    padding-top: 0px;
 }
 
-.top-login {
-    padding: .8rem 2rem;
-    margin: 2em;
-    background-color: #565B6C;
-    color: #FFF;
-    border-radius: 5px;
+    .nav-wdgts a {
+        color: #565B6C;
+        transition: .5s;
+    }
+
+        .nav-wdgts a:hover {
+            color: #000000;
+        }
+
+        .nav-wdgts-container div {
+        margin: 1.8em 2em;
+    }
+
+    .nav-wdgts i {
+        padding-right: 5px;
+    }
+
+.wdgt-login {
+
 }
+
+    .wdgt-login a {
+        color: #FFF;
+        padding: 8px 16px;
+        font-size: 14px;
+        border-radius: 5px;
+        background-color: #E88D1F;
+        text-decoration: none;
+    }
+
+    .wdgt-login a:hover {
+        color: #FFF;
+        background-color: #ce7912;
+        text-decoration: none;
+    }
+
+    .wdgt-name {
+        color: #bba996;
+        background-color: #fff;
+        font-style: italic;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 0;
+        right: 0;
+        font-size: 14px;
+        padding-right: 2rem;
+        padding-left: 1rem;
+        margin-top: 70px;
+    }
+    .wdgt-name::before {
+        content: 'Welcome, ';
+        white-space: pre;
+    }
+
+    .wdgt-name::after {
+        content: '!';
+    }
+
+
+
+/*             */
+
 
 .nav-container {
-    font-family: 'Poppins', sans-serif;
-    max-width: 1600px;
     padding: 0 0rem;
     margin: 0 auto;
     display: flex;
@@ -87,29 +157,39 @@ header{
     color: #565B6C;
     padding: 0rem 0rem;
     margin: 1rem 2rem;
-    font-size: .95rem;
+    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     transition: .5s;
-    border-bottom: 2px #ffffff solid;
 }
 
 .nav-link > a:hover {
-    color: #E88D1F;
-    border-bottom: 2px #E88D1F solid;
+    color: #000;
 }
 
 .nav-link > a > i{
     margin-left: .2rem;
 }
 
+.nav-link .nav-header {
+    line-height: 2rem;
+    padding: 0rem 0rem;
+    margin: 1rem 2rem;
+    font-size: 14px;
+    transition: .5s;
+    border-bottom: 2px #ffffff solid;
+}
+
+.nav-link i {
+    padding-right: 3px;
+}
+
 .dropdown{
     position: absolute;
+    display: flex;
     top: 100%;
-    
     left: 0;
-    width: 18rem;
     transform: translateY(10px);
     opacity: 0;
     pointer-events: none;
@@ -117,48 +197,12 @@ header{
 }
 
 .dropdown ul{
-    padding-top: 2rem;
     position: relative;
-    background-color: #fff;
-}
-
-.dropdown-link > a{
-    display: flex;
-    background-color: #fff;
-    color: #565B6C;
-    padding: 0rem 2rem 2rem 2rem;
-    font-size: .9rem;
-    align-items: center;
-    justify-content: space-between;
-    transition: .3s;
-}
-
-.dropdown-link:hover > a{
-    color: #E88D1F;
-}
-
-.dropdown-link i{
-    transform: rotate(-90deg);
+    background-color: #fafbfc;
 }
 
 .dropdown-link{
     /* position: relative */
-}
-
-.dropdown.second{
-    top: 0px;
-    left: 100%;
-    position: absolute;
-    cursor: pointer;
-    transform: translateX(10px);
-}
-
-.dropdown.second a {
-    background-color: #f6f6f8;
-}
-
-.dropdown.second ul {
-    background-color: #f6f6f8;
 }
 
 .nav-link:hover > .dropdown,
@@ -168,5 +212,378 @@ header{
     pointer-events: auto;
 }
 
+
+/*             */
+
+.dropdown-list-type {
+    padding-top: 2rem;
+    width: 250px;
+}
+
+.dropdown-list-type li {
+    padding: 2rem 0rem 0rem 2rem;
+    margin-left: 0;
+    font-size: .9rem;
+    align-items: center;
+    justify-content: space-between;
+    transition: .3s;
+}
+
+    .dropdown-list-type li a {
+        color: #565B6C;
+        transition: .5s;
+    }
+
+    .dropdown-list-type li a:hover {
+        color: #000000;
+    }
+
+.dropdown-list-header {
+    padding: 0rem 0rem 0rem 2rem;
+    margin-left: 0;
+    font-size: .9rem;
+    align-items: center;
+    justify-content: space-between;
+    transition: .3s;
+}
+
+    .dropdown-list-member-information {
+        color: #3fa74b;
+        font-weight: 800;
+    }    
+
+    .dropdown-list-member-benefits {
+        color: #3fa74b;
+        font-weight: 800;
+    }
+
+    .dropdown-list-nei-meetings {
+        color: #E88D1F;
+        font-weight: 800;
+    }
+
+    .dropdown-list-practice-tools {
+        color: #702e8b;
+        font-weight: 800;
+    }
+
+    .dropdown-list-teaching-tools {
+        color: #702e8b;
+        font-weight: 800;
+    }
+
+    .dropdown-list-online-cmece {
+        color: #565B6C;
+        font-weight: 800;
+    }
+
+    .dropdown-list-cmece-cert {
+        color: #565B6C;
+        font-weight: 800;
+    }
+
+.dropdown-list-type ul li {
+    display: flex;
+    color: #565B6C;
+    padding: 0rem 2rem 2rem 0rem;
+    margin-left: 0;
+    font-size: .9rem;
+    align-items: center;
+    justify-content: space-between;
+    transition: .3s;
+}
+
+.dropdown-list-type ul li a {
+    color: #565B6C;
+}
+
+.dropdown-button-type li{
+    flex-grow: 1;
+    width: 100%;
+    margin: 0 auto
+}
+
+.dropdown-button-type {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.dropdown-button {
+    display: flex;
+    justify-content: center;
+
+    background-color: #f5f5f8;
+    border-left: solid 1px #e7e8ec;
+    border-top: solid 1px #e7e8ec;
+    border-right: solid 1px #e7e8ec;
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+
+    transition: .5s;
+}
+
+.dropdown-button a {
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+}
+
+    .dropdown-button:hover {
+        background-color: #e7e8ec;
+    }
+
+    .dropdown-button img {
+        width: 50px;
+        margin: 0 auto;
+        padding-bottom: 10px;
+    }
+
+    .dropdown-button span {
+        color: #3fa74b;
+        font-weight: 800;
+        font-size: .9rem;
+    }
+
+.dropdown-simple-type {
+    padding-bottom: 2rem;
+    width: 250px;
+}
+
+.dropdown-simple-type li {
+    padding: 2rem 2rem 0rem 2rem;
+    margin-left: 0;
+    font-size: .9rem;
+    align-items: center;
+    justify-content: space-between;
+    transition: .3s;
+}
+
+    .dropdown-simple-type li a {
+        color: #565B6C;
+        transition: .5s;
+    }
+
+    .dropdown-simple-type li a:hover {
+        color: #000000;
+    }
+
+
+/*Meetings Navigation Bar*/
+    
+.meetings-register-link a{
+    line-height: unset;
+    color: #FFF;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #E88D1F;
+
+}
+
+.meetings-register-link a:hover{
+    color: #FFF;
+    background-color: #ce7912;
+
+}
+    
+.bth-link-meetings {
+    border-right: solid 3px #f8f9fa;
+}
+    .bth-link-meetings a {
+        color: #E88D1F;
+    }
+    .bth-link-meetings a:hover {
+        color: #ce7912;
+    }
+
+
+/*Membership Navigation Bar*/
+
+.membership-joinrenew-link a{
+    line-height: unset;
+    color: #FFF;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #3fa74b;
+}
+
+.membership-joinrenew-link a:hover {
+    color: #FFF;
+    background-color: #34883e;
+}
+
+.bth-link-membership {
+    border-right: solid 3px #f8f9fa;
+}
+    .bth-link-membership a {
+        color: #3fa74b;
+    }
+
+
+/*MPP Navigation Bar*/
+
+.mpp-cta-link a{
+    line-height: unset;
+    color: #FFF;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #863333;
+}
+
+.mpp-cta-link a:hover {
+    color: #FFF;
+    background-color: #6e2b2b;
+}
+    
+.bth-link-mpp {
+    border-right: solid 3px #f8f9fa;
+}
+    .bth-link-mpp a {
+        color: #863333;
+    }
+
+
+
+    
+
+/*Mobile*/
+
+@media only screen and (max-width: 845px) {
+    header{
+        position: relative;
+        top: 0px;
+        background-color: #FFF;
+        width: 100vw;
+        height: calc(100vh - 200px);
+        z-index: 1000;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .nav-links {
+        padding-top: 10px;
+    }
+
+    .nav-links, .nav-btn {
+        width: 100%;
+    }
+
+    .nav-wdgts {
+        position: fixed;
+        background-color: #f2f4f7;
+        top: unset; right: unset;
+        bottom: 0px;
+        width: 100%; height: 200px;
+    }
+
+    .nav-wdgts-container {
+        position: unset;
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+        right: unset; left: unset;
+    }
+
+    .wdgt-search, .wdgt-shop, .wdgt-login {
+        text-align: center; 
+    }
+
+    .wdgt-search, .wdgt-shop {
+        padding: 0;
+    }
+
+    .wdgt-name {
+        position: fixed;
+        background-color: unset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: unset;
+        bottom: 0;
+        right: unset;
+        font-size: 14px;
+        padding-right: 0;
+        padding-left: 0;
+        margin-top: 0px;
+        margin-bottom: 30px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links > ul{
+        display: block;
+       
+    }
+    .dropdown{
+        position: initial;
+        top: initial;
+        left: initial;
+        transform: initial;
+        opacity: 1;
+        pointer-events: auto;
+        width: 100%;
+        padding: 0;
+        background-color: #3183ac;
+        display: none;
+    }
+
+    .nav-link:hover > .dropdown,
+    .dropdown-link:hover > .dropdown{
+        display: unset;
+    }
+
+    .nav-btn{
+        overflow-x: hidden;
+        overflow-y: auto;
+        transition: .65s;
+    }
+    
+    .dropdown-button-type {
+        display: none;
+    }
+
+    .dropdown-list-type {
+        padding-top: 2rem;
+        width: 100vw;
+    }
+
+    .dropdown-simple-type {
+        width: 100%;
+    }
+
+
+    .bth-link-meetings a{
+        display: block;
+    }
+
+    .bth-link-membership a{
+        display: block;
+    }
+
+    .bth-link-mpp a{
+        display: block;
+    }
+
+    .meetings-register-link {
+        width: fit-content;
+    }
+
+    .membership-joinrenew-link {
+        width: fit-content;
+    }
+
+    .mpp-cta-link {
+        width: fit-content;
+    }
+}
 
 
