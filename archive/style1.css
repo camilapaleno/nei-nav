@@ -8,36 +8,6 @@
     font-family: Avenir, Nunito Sans, Arial, Helvetica, sans-serif;
 }
 
-/*Corrections*/
-.navigation-cpv1 {
-    z-index: 999;
-}
-.navigation-cpv1 ul {
-    margin-left: unset;
-    padding-left: unset;
-    margin-bottom: unset;
-}
-
-.navigation-cpv1 .nav {
-    display: block;
-    padding-left: unset;
-    margin-bottom: unset;
-}
-
-.navigation-cpv1 .nav-link {
-    padding: unset;
-
-}
-
-.navigation-cpv1 li {
-    line-height: unset;
-}
-
-.example-body {
-    z-index: -1;
-}
-
-
 :root {
 
     --white-2: #f2f4f7;
@@ -48,12 +18,6 @@
 
     --membership-green: #3fa74b;
     --membership-green-hover: #3fa74b;
-
-    --meetings-orange: #c55307;
-    --meetings-orange-hover: #b64c06;
-
-    --mpp-red: #4e1717;
-    --mpp-red-hover: #421818;
     
     --nei-orange: #E88D1F;
     --nei-orange-hover: #ce7912;
@@ -97,40 +61,33 @@
     width: fit-content;
 }
 
-.example-body {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #a7a7a7;
-    text-align: center;
-}
-
 /*START*/
 
 body {
     background-color: rgb(180, 207, 209);
 }
 
-/*Top Navigation Bar - includes Logo and Navigation Widgets */
+header{
+    top: 0px;
 
-.top-bar {
-    background-color: #FFF;
-    z-index: 1001;
-    border-bottom: 1px var(--white-3) solid;
+    width: 100%;
+    z-index: 1000;
+    
 }
 
-.top-bar-container {
+.header-container {
     max-width: 1600px;
-    height: 70px;
     margin: 0 auto;
     position: relative;
+}
 
+.top-container {
+    background-color: #FFF;
+    z-index: 1001;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    border-bottom: 3px var(--white-2) solid;
 }
 
 .top-logo {
@@ -140,33 +97,28 @@ body {
     display: flex;
 }
 
-    .top-logo img {
-        width: 300px;
-    }
+.top-logo img {
+    width: 300px;
+}
 
-    .logo-desktop {
-        display: block;
-    }
+.logo-desktop {
+    display: block;
+}
 
-    .logo-mobile {
-        display: none;
-    }
-
-
-/*Navigation Widgets- includes Shop, Search, User*/
+.logo-mobile {
+    display: none;
+}
 
 .nav-wdgts {
     z-index: 1002;
-    position: absolute;
-    top: 0;
-    right: 0;
 }
 
 .nav-wdgts-container { 
-    
+    position: absolute;
     display: flex;
     align-items: center;
-
+    top: 0;
+    right: 0;
     font-size: 14px;
     padding-top: 0px;
     padding-right: 1em;
@@ -195,13 +147,13 @@ body {
         padding: 8px 16px;
         font-size: 14px;
         border-radius: 5px;
-        background-color: var(--nei-orange);
+        background-color: var(--darkgrey-1);
         text-decoration: none;
     }
 
         .wdgt-login a:hover {
             color: #FFF;
-            background-color: var(--nei-orange-hover);
+            background-color: var(--darkgrey-2);
             text-decoration: none;
         }
 
@@ -232,12 +184,10 @@ body {
         border-radius: 5px;
         position: absolute;
         right: 27px;
-        margin-top: -10px;
+        margin-top: -70px;
         padding-bottom: 10px;
-        padding-top: 10px;
         box-shadow: 0px 0px 10px #494d5c3f;  
 
-        /*For JS*/
         display: none;
         transition: .3s;
     }
@@ -278,24 +228,22 @@ body {
 
 
 
-/*Main Nagivation Bar including Dropdown*/
-.main-nav {
-    background-color: #FFF;
-}
+/*             */
 
-.main-nav-container {
+
+.nav-container {
     padding: 0 0rem;
     margin: 0 auto;
     display: flex;
     position: relative;    
-    max-width: 1600px;
+    background-color: #FFF;
 }
 
-.main-nav-container ul {
+.nav-container ul {
     list-style: none;
 }
 
-.main-nav-container a {
+.nav-container a {
     text-decoration: none;
 }
 
@@ -358,6 +306,10 @@ body {
     background-color: #fafbfc;
 }
 
+.dropdown-link{
+    /* position: relative */
+}
+
 .nav-link:hover > .dropdown,
 .dropdown-link:hover > .dropdown{
     transform: translate(0, 0);
@@ -366,7 +318,7 @@ body {
 }
 
 
-/*Main Navigation Bar Dropdown*/
+/*             */
 
 .dropdown-list-type {
     padding-top: 2rem;
@@ -524,85 +476,38 @@ body {
     }
 
 
-
-
 /*Meetings Navigation Bar*/
-
-.meetings-nav {
-    background-color: #FFF;
-}
-
-.meetings-nav-container {
-    padding: 0 0rem;
-    margin: 0 auto;
-    display: flex;
-    position: relative;    
-    max-width: 1600px;
-}
-
-.meetings-nav-container ul {
-    list-style: none;
-}
-
-.meetings-nav-container a {
-    text-decoration: none;
-}
-
-.meetings-nav-container .nav-link:nth-child(1) {
-    border-right: solid 1px var(--white-3);
     
-}
-
-    .meetings-nav-container .nav-link:nth-child(1) a{
-        color: var(--meetings-orange);
-    }
-
-.meetings-nav-container .nav-link:nth-child(2) {
-    border-right: solid 1px var(--white-3);   
-}
-
-.meetings-nav-container .nav-link:last-child a{
+.meetings-register-link a{
     line-height: unset;
     color: #FFF;
     padding: 8px 16px;
     font-size: 14px;
     border-radius: 5px;
-    background-color: var(--meetings-orange);
+    background-color: var(--nei-orange);
+
 }
 
+.meetings-register-link a:hover{
+    color: #FFF;
+    background-color: var(--nei-orange-hover);
+
+}
+    
+.bth-link-meetings {
+    border-right: solid 3px var(--white-3);
+}
+    .bth-link-meetings a {
+        color: var(--nei-orange);
+    }
+    .bth-link-meetings a:hover {
+        color: var(--nei-orange-hover);
+    }
 
 
 /*Membership Navigation Bar*/
 
-.membership-nav {
-    background-color: #FFF;
-}
-
-.membership-nav-container {
-    padding: 0 0rem;
-    margin: 0 auto;
-    display: flex;
-    position: relative;    
-    max-width: 1600px;
-}
-
-.membership-nav-container ul {
-    list-style: none;
-}
-
-.membership-nav-container a {
-    text-decoration: none;
-}
-
-.membership-nav-container .nav-link:first-child {
-    border-right: solid 1px var(--white-2);
-}
-
-    .membership-nav-container .nav-link:first-child a{
-        color: var(--membership-green);
-    }
-
-.membership-nav-container .nav-link:last-child a{
+.membership-joinrenew-link a{
     line-height: unset;
     color: #FFF;
     padding: 8px 16px;
@@ -611,45 +516,41 @@ body {
     background-color: var(--membership-green);
 }
 
-/*MPP Navigation Bar*/
-
-.mpp-nav {
-    background-color: #FFF;
+.membership-joinrenew-link a:hover {
+    color: #FFF;
+    background-color: var(--membership-green-hover);
 }
 
-.mpp-nav-container {
-    padding: 0 0rem;
-    margin: 0 auto;
-    display: flex;
-    position: relative;    
-    max-width: 1600px;
+.bth-link-membership {
+    border-right: solid 3px var(--white-3);
 }
-
-.mpp-nav-container ul {
-    list-style: none;
-}
-
-.mpp-nav-container a {
-    text-decoration: none;
-}
-
-.mpp-nav-container .nav-link:first-child {
-    border-right: solid 1px var(--white-2);
-}
-
-    .mpp-nav-container .nav-link:first-child a{
-        color: var(--mpp-red);
+    .bth-link-membership a {
+        color: var(--membership-green);
     }
 
-.mpp-nav-container .nav-link:last-child a{
+
+/*MPP Navigation Bar*/
+
+.mpp-cta-link a{
     line-height: unset;
     color: #FFF;
     padding: 8px 16px;
     font-size: 14px;
     border-radius: 5px;
-    background-color: var(--mpp-red);
+    background-color: #863333;
 }
 
+.mpp-cta-link a:hover {
+    color: #FFF;
+    background-color: #6e2b2b;
+}
+    
+.bth-link-mpp {
+    border-right: solid 3px var(--white-3);
+}
+    .bth-link-mpp a {
+        color: #863333;
+    }
 
 
 
@@ -657,11 +558,22 @@ body {
 
 /*Mobile*/
 
-@media only screen and (max-width: 1080px) {
-
-    .top-bar {
+@media only screen and (max-width: 845px) {
+    header{
         position: fixed;
+        top: 0px;
+        background-color: #FFF;
         width: 100vw;
+        z-index: 1000;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        
+        height: 68px;
+    }
+
+    .top-container {
+        position: fixed;
+        width: 100%;
     }
 
     .top-logo {
@@ -683,15 +595,16 @@ body {
     .logo-mobile {
         display: block;
     }
+    
 
-    .navigation-cpv1 .nav {
-        display: none;
+    .nav-container {
+        display: block; /*Change to display block*/
+        
     }
-
-
 
     .nav-links {
         padding-top: 10px;
+        margin-top: 68px;
         height: calc(100vh - (68px));
         overflow-y: scroll;
     }
@@ -700,11 +613,8 @@ body {
         width: 100%;
     }
 
-
-    
     .nav-wdgts {
         position: fixed;
-        
         background-color: unset;
         top: 0; right: 0;
         padding-left: 1em;
@@ -714,13 +624,14 @@ body {
     }
 
     .nav-wdgts-container {
-        width: 100%;
         position: unset;
         max-width: none;
+        margin: 0 auto;
         text-align: right;
-        justify-content: flex-end;
+        flex-wrap: wrap;
+        justify-content: right;
         padding-top: 0px;
-        right: 0; left: unset;
+        right: unset; left: unset;
     }
 
     .nav-wdgts-container div {
@@ -771,10 +682,11 @@ body {
 
     }
 
-    .nav-links {
-        position: fixed;
-        background-color: var(--white-2);
-        margin-top: 70px;
+
+
+
+    .nav-btn {
+        display: none;
     }
 
     .nav-links > ul{
@@ -822,27 +734,30 @@ body {
         width: 100%;
     }
 
-    .meetings-nav-container .nav-link:first-child {
-        width: fit-content;
+
+    .bth-link-meetings a{
+        display: block;
     }
-    
-    .meetings-nav-container .nav-link:last-child a{
+
+    .bth-link-membership a{
+        display: block;
+    }
+
+    .bth-link-mpp a{
+        display: block;
+    }
+
+    .meetings-register-link {
         width: fit-content;
     }
 
-    .membership-nav-container .nav-link:first-child {
-        width: fit-content;
-    }
-    
-    .membership-nav-container .nav-link:last-child a{
+    .membership-joinrenew-link {
         width: fit-content;
     }
 
-    .mpp-nav-container .nav-link:first-child {
-        width: fit-content;
-    }
-    
-    .mpp-nav-container .nav-link:last-child a{
+    .mpp-cta-link {
         width: fit-content;
     }
 }
+
+
