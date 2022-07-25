@@ -8,18 +8,50 @@
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Log In</title>
+    <style>
 
+
+    </style>
 
 </head>
 
 <body>
-    <div class="example-body">
-        <p>Log in Page. Input Username and Password.<br><a href="index-user.html">Click to Log In</a></p>
+    <div class="account-screen">
+      <div class="account-screen-logo"><img src="https://cdn.neiglobal.com/content/email/graphics/nei-logo-color-rgb-600x100.png"></div>
+      <!-- <div class="account-screen-exit"><i class="fas fa-times"></i></div> -->
+        <div class="log-in-wrapper">
+            <div class="log-in">
+                <div class="log-in-header">
+                    <h2>Log In</h2>
+                    <p><small>New user? <a class="log-in-link" href="create.html">Create a free guest account.</a></small></p>                    
+                </div>
+                <form>
+                    <div class="log-in-form">
+                      <label for="email"><b>Email</b></label>
+                      <br>
+                      <input class="email-field" type="text" placeholder="Enter Email" name="email" required>
+                      <br><br>
+                      <label for="psw"><b>Password</b></label>
+                      <br>
+                      <input class="password-field" type="password" placeholder="Enter Password" name="psw" required>
+                      <br><br><br>
+                      <div class="log-in-btn">
+                      <a href="index-user.html">Log In</a><!-- <button type="submit"></button> -->
+                      </div>
+                      <br>
+                      <div class="log-in-footer">
+                        <label class="remember"><small>Remember Me</small>
+                          <input type="checkbox" checked="checked">
+                          <span class="checkmark"></span>
+                        </label>
+                        <small class="psw"><a href="#">Forgot password?</a></small>
+                      </div>
+                    </div>
+                  </form>
+            </div>
+        </div>
+        <div class="account-screen-footer"><small>Copyright © 2004-2022 Neuroscience Education Institute. All rights reserved.</small></div>
     </div>
 </body>
-
-<script src="navigation.js">
-
-</script>
 
 </html>
